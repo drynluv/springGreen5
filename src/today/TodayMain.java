@@ -173,7 +173,6 @@ public class TodayMain extends JFrame {
 		return run;
 	}
 
-
 	public static void main(String[] args) {
 		
 		new TodayMain();

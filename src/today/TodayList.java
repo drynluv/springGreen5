@@ -21,6 +21,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 
 @SuppressWarnings("serial")
 public class TodayList extends JFrame {
@@ -38,16 +39,17 @@ public class TodayList extends JFrame {
 		getContentPane().setLayout(null);
 		
 		JPanel pn1 = new JPanel();
-		pn1.setBounds(12, 10, 460, 201);
+		pn1.setBounds(12, 10, 460, 238);
 		getContentPane().add(pn1);
 		pn1.setOpaque(false);
 		pn1.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 10, 460, 189);
+		scrollPane.setBounds(12, 10, 436, 228);
 		pn1.add(scrollPane);
 		
 		table = new JTable();
+		table.setForeground(new Color(64, 0, 0));
 		table.setFont(new Font("휴먼아미체", Font.BOLD, 18));
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
@@ -126,25 +128,28 @@ public class TodayList extends JFrame {
 		table.setRowHeight(27); //테이블 높이 조절하기
 		
 		JPanel pn2 = new JPanel();
-		pn2.setBounds(12, 221, 460, 308);
+		pn2.setBounds(12, 258, 460, 243);
 		getContentPane().add(pn2);
 		pn2.setLayout(null);
 		
 		JLabel lblPhoto = new JLabel("");
-		lblPhoto.setBounds(0, 0, 460, 308);
+		lblPhoto.setBounds(12, 10, 436, 223);
 		pn2.add(lblPhoto);
 		
 		JPanel pn3 = new JPanel();
 		pn3.setLayout(null);
-		pn3.setBounds(12, 539, 460, 222);
+		pn3.setBounds(12, 511, 460, 250);
 		getContentPane().add(pn3);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(0, 0, 460, 167);
+		scrollPane_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane_1.setBounds(12, 0, 436, 167);
 		pn3.add(scrollPane_1);
 		
 		txtaContent = new JTextArea();
-		txtaContent.setFont(new Font("Monospaced", Font.PLAIN, 16));
+		txtaContent.setForeground(new Color(64, 0, 0));
+		txtaContent.setLineWrap(true);
+		txtaContent.setFont(new Font("휴먼아미체", Font.BOLD, 20));
 		scrollPane_1.setViewportView(txtaContent);
 		
 		setVisible(true);
@@ -249,7 +254,7 @@ public class TodayList extends JFrame {
 					}
 				}
 			
-//			table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);	
+			table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);	
 			
 
 //			table.getColumnModel().getColumn(0).setPreferredWidth(90);  // 날짜
