@@ -114,8 +114,8 @@ public class TodayMain extends JFrame {
 		lblNewLabel_2.setOpaque(true);
 		lblNewLabel_2.setBackground(new Color(255, 255, 255, 120)); // RGBA
 		
-		txtId.setText("오늘");
-		txtPwd.setText("1234");
+//		txtId.setText("오늘");
+//		txtPwd.setText("1234");
 		
 		// -------------------------------------------
 		

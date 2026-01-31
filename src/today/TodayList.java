@@ -113,11 +113,11 @@ public class TodayList extends JFrame {
 			dtm.addRow(new Object[] {vo.getwDate(), vo.getWeather(), vo.getFeel(), vo.getContent()});
 		}
 		
-		table.getColumnModel().getColumn(0).setMaxWidth(110);
-		table.getColumnModel().getColumn(1).setMaxWidth(110);
-		table.getColumnModel().getColumn(2).setMaxWidth(110);
-		table.getColumnModel().getColumn(0).setResizable(false);
-		table.getColumnModel().getColumn(1).setResizable(false);
+//		table.getColumnModel().getColumn(0).setMaxWidth(999);
+//		table.getColumnModel().getColumn(1).setMaxWidth(110);
+//		table.getColumnModel().getColumn(2).setMaxWidth(110);
+//		table.getColumnModel().getColumn(0).setResizable(false);
+//		table.getColumnModel().getColumn(1).setResizable(false);
 		
 		DefaultTableCellRenderer dtcr = new DefaultTableCellRenderer();
 		dtcr.setHorizontalAlignment(SwingConstants.CENTER);
@@ -257,10 +257,10 @@ public class TodayList extends JFrame {
 			table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);	
 			
 
-//			table.getColumnModel().getColumn(0).setPreferredWidth(90);  // 날짜
-//			table.getColumnModel().getColumn(1).setPreferredWidth(90);  // 날씨
-//			table.getColumnModel().getColumn(2).setPreferredWidth(120); // 기분
-//			table.getColumnModel().getColumn(3).setPreferredWidth(250); // 내용
+			table.getColumnModel().getColumn(0).setPreferredWidth(300);  // 날짜
+			table.getColumnModel().getColumn(1).setPreferredWidth(1);  // 날씨
+			table.getColumnModel().getColumn(2).setPreferredWidth(1); // 기분
+			table.getColumnModel().getColumn(3).setPreferredWidth(2); // 내용
 			}
 		});
 		

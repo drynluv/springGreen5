@@ -214,6 +214,7 @@ public class TodaySearch extends JFrame {
 		pn1.add(scrollPane);
 		
 		txtaContent = new JTextArea();
+		txtaContent.setLineWrap(true);
 		txtaContent.setFont(new Font("휴먼아미체", Font.BOLD, 21));
 		scrollPane.setViewportView(txtaContent);
 		txtaContent.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
